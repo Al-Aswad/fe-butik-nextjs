@@ -41,6 +41,10 @@
         "react/jsx-indent-props": [
             "error",
             4
+        ],
+        "linebreak-style": [
+            "unix",
+            "windows"
         ]
     }
 }
