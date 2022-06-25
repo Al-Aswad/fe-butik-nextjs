@@ -10,6 +10,7 @@ import Header from '../components/Header/Header';
 import Footer from '../components/Footer/Footer';
 import Banner from '../components/Banner/Banner';
 import Rating from '../components/Rating/Rating';
+import ModalSort from '../components/Modal/ModalSort';
 
 export default function Home() {
     const [value, setValue] = useState("2");
@@ -82,6 +83,7 @@ export default function Home() {
 
             <div className='flex justify-center'>
                 <button className='py-2 px-4 rounded-md bg-slate-700 text-white'>More</button>
+                {/* <ModalSort /> */}
             </div>
         </div>
     );
