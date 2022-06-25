@@ -12,7 +12,7 @@ const Header = () => {
     return (
         <header>
 
-            <div className="fixed left-0 right-0 z-40 bg-red-500">
+            <div className="fixed left-0 top-0 right-0 z-40 bg-red-500">
                 <div className="flex flex-row justify-center flex-auto">
                     <nav className="bg-white h-[70px] flex flex-auto flex-row items-center justify-center">
                         <div className="flex justify-center flex-auto sm:w-2/6">
