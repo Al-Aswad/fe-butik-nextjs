@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import iconLogo from '../../public/img/logo.png';
 import imgBanner from '../../public/img/img-banner.jpg';
+import { AiFillStar } from "react-icons/ai";
 
 function Banner() {
     return (
@@ -25,7 +26,6 @@ function Banner() {
                     </h1>
                 </div>
             </div>
-
         </div>
     );
 }

@@ -1,10 +1,21 @@
 import Head from 'next/head';
 import Link from 'next/link';
-import { FaSortAmountDownAlt } from 'react-icons/fa';
-import { AiOutlineSearch, AiOutlineUser } from 'react-icons/ai';
-import Banner from '../components/Banner/Banner';
+import { TabContext, TabPanel } from "@mui/lab";
+import React, { useState } from 'react';
+import Box from "@mui/material/Box";
+import Tabs from "@mui/material/Tabs";
+import Tab from "@mui/material/Tab";
+import Product from '../components/Product/Product';
+import Header from '../components/Header/Header';
+import Footer from '../components/Footer/Footer';
 
 export default function Home() {
+    const [value, setValue] = useState("2");
+
+    const handleChangeTab = (event, newValue) => {
+        setValue(newValue);
+    };
+
     return (
         <div>
             <Head>
@@ -15,61 +26,73 @@ export default function Home() {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
 
-            <header>
+            <Header />
 
-                <div className="fixed left-0 right-0 z-40 bg-red-500">
-                    <div className="flex flex-row justify-center flex-auto">
-                        <nav className="bg-white h-[70px] flex flex-auto flex-row items-center justify-center">
-                            <div className="flex justify-center flex-auto sm:w-2/6">
-                                <div />
+            <main className="pt-[70px] mb-8">
+
+                <TabContext value={value}>
+                    <Box
+                        sx={{ width: "100%" }}
+                        className="sticky top-[70px] z-30 pb-1 mb-2 bg-white"
+                    >
+                        <Tabs value={value} onChange={handleChangeTab} centered>
+                            <Tab
+                                sx={{ borderBottom: 0.5, borderColor: "divider" }}
+                                className="font-sans text-sm font-semibold border-b-2 lg:w-1/4 outline-2"
+                                label="Kategori"
+                                value="1"
+                            />
+                            <Tab
+                                sx={{ borderBottom: 0.5, borderColor: "divider" }}
+                                className="font-sans text-sm font-semibold border-b-2 lg:w-1/4"
+                                label="Semua produk"
+                                value="2"
+                            />
+                            <Tab
+                                sx={{ borderBottom: 0.5, borderColor: "divider" }}
+                                className="font-sans text-sm font-semibold border-b-2 lg:w-1/4"
+                                label="diskon"
+                                value="3"
+                            />
+                        </Tabs>
+                    </Box>
+                    <TabPanel value="1">
+                        Item 1
+                    </TabPanel>
+                    <TabPanel value="2">
+                        <div className="z-20 w-full p-2 mx-auto sm:p-0 lg:w-3/4">
+                            <div className="flex flex-wrap justify-center w-full gap-4 px-2 pt-4 md:gap-4">
+                                <Product />
+                                <Product />
+                                <Product />
+                                <Product />
+                                <Product />
+                                <Product />
+                                <Product />
+                                <Product />
+                                <Product />
+                                <Product />
+                                <Product />
+                                <Product />
+                                <Product />
+                                <Product />
+                                <Product />
                             </div>
-                            <div className="flex flex-auto w-4/6 pl-4 sm:pl-0 sm:text-center sm:justify-center sm:w-2/6">
-                                <Link href="/">
-                                    <p className="font-semibold tracking-wide text-gray-800 text-md">
-                                        Zahrazhafira
-                                    </p>
-                                </Link>
-                            </div>
-                            <div className="flex justify-end flex-auto w-2/6 pr-2 sm:pr-4">
-                                <div className="flex items-center sm:mr-4 sm:gap-2">
-                                    <div>
-                                        <a
-                                            className="flex justify-center p-2 rounded-full hover:bg-gray-200 item-center"
-                                            href="#s"
-                                        >
-                                            <FaSortAmountDownAlt />
-                                        </a>
-                                    </div>
-                                    <div>
-                                        <a
-                                            className="flex justify-center p-2 rounded-full hover:bg-gray-200 item-center"
-                                            href="#s"
-                                        >
-                                            <AiOutlineSearch className="w-6 h-6" />
-                                        </a>
-                                    </div>
-                                    <div>
-                                        <a
-                                            className="flex justify-center p-2 rounded-full item-center hover:bg-gray-200"
-                                            href="#s"
-                                        >
-                                            <AiOutlineUser className="w-6 h-6" />
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </nav>
-                    </div>
+                        </div>
+                    </TabPanel>
+                    <TabPanel value="3">
+                        Item Three
+                    </TabPanel>
+                </TabContext>
+
+                <div className="flex items-center justify-center w-full">
+                    <button className="px-4 py-2 bg-gray-800 rounded-sm text-slate-100">
+                        More
+                    </button>
                 </div>
 
-            </header>
-            <Banner />
-            <main className="pt-[70px] mb-8">
-                main
             </main>
-            <footer>
-                footer
-            </footer>
+            <Footer />
         </div>
     );
 }
