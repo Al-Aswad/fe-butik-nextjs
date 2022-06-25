@@ -1,12 +1,13 @@
 import Image from 'next/image';
 import iconLogo from '../../public/img/logo.png';
-import imgBanner from '../../public/img/img-banner.jpg';
+import imgBanner from '../../public/img/img-banner1.jpg';
 import { AiFillStar } from "react-icons/ai";
 
 function Banner() {
     return (
         <div>
-            <div className="flex items-center justify-center max-w-[1024px] mx-auto">
+            {/* <div className="flex items-center justify-center max-w-[1024px] mx-auto"> */}
+            <div className="flex items-center justify-center max-w-11/12 mx-auto">
                 <Image className="rounded-md" src={imgBanner} alt="image banner" />
             </div>
 

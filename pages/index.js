@@ -79,6 +79,10 @@ export default function Home() {
                     Item Three
                 </TabPanel>
             </TabContext>
+
+            <div className='flex justify-center'>
+                <button className='py-2 px-4 rounded-md bg-slate-700 text-white'>More</button>
+            </div>
         </div>
     );
 }

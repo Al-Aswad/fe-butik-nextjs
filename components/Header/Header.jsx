@@ -19,8 +19,8 @@ const Header = () => {
                             <div />
                         </div>
                         <div className="flex flex-auto w-4/6 pl-4 sm:pl-0 sm:text-center sm:justify-center sm:w-2/6">
-                            <Link href="/">
-                                <p className="font-semibold tracking-wide text-gray-800 text-md">
+                            <Link href="/" >
+                                <p className="font-semibold cursor-pointer tracking-wide text-gray-800 text-md">
                                     Zahrazhafira
                                 </p>
                             </Link>
