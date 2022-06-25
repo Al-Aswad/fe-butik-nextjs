@@ -6,18 +6,17 @@ const Product = () => {
     return (
         <>
             <Link href="products/aswad">
-                <div className="relative flex flex-col w-[45%] md:w-[32%] overflow-hidden rounded-lg cursor-pointer shadow-md">
+                <div className="relative flex flex-col w-full overflow-hidden rounded-lg cursor-pointer shadow-md">
                     <div className="p-2 ">
                         <div className="relative p-2 rounded-lg thumnail">
-                            {/* <Image
+                            <Image
                                 className="object-contain w-full h-full"
-                                // src={product.image}
-                                src={'img/product1.jpeg'}
+                                src={'/img/product1.jpeg'}
                                 alt="image-product"
                                 width="100%"
                                 height="100%"
                                 layout="responsive"
-                            /> */}
+                            />
                             <div className="absolute bottom-[-10px] tags space-x-2">
                                 <small className="px-1 py-[0.8] text-white bg-gray-800 rounded-sm bg-secodary ">
                                     product Status

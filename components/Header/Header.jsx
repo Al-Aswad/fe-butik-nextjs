@@ -56,10 +56,6 @@ const Header = () => {
                     </nav>
                 </div>
             </div>
-
-            <Banner />
-            <Rating />
-
         </header>
     );
 };
